@@ -1,0 +1,6 @@
+
+- yum install mapr-fileserver mapr-cldb mapr-zookeeper mapr-nodemanager mapr-historyserver mapr-resourcemanager mapr-spark mapr-hbase-regionserver mapr-hbase-master -y
+
+- /opt/mapr/server/configure.sh -secure -genkeys -C `hostname -f` -Z `hostname -f`  -N `hostname -f` -F /opt/disks.txt -disk-opts FW1
+- /opt/mapr/bin/maprcli license add -license LatestDemoLicense-M7.txt -is_file true
+- wget http://maprsupport:'maprexpre$$'@stage.mapr.com/license/LatestDemoLicense-M7.txt
